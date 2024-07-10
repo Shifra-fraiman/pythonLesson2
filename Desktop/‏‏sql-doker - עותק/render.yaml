@@ -1,0 +1,10 @@
+services:
+    - name: copyrightdbsql
+      start_command: ./init-db.sh
+      environment:
+          ACCEPT_EULA: "Y"
+          SA_PASSWORD: "CopyRight#1"
+      env_vars:
+          - key: SQL_SERVER_PORT
+            value: "1433"
+      http_port: 1433
